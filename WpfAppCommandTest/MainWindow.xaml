@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfAppCommandTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCommandTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="8">
+        <StackPanel>
+            <TextBox FontSize="16" Text="{Binding Input1}" Margin="0,0,0,8"/>
+            <TextBox FontSize="16" Text="{Binding Input2}" Margin="0,0,0,8"/>
+            <TextBox FontSize="16" Text="{Binding Result}" Margin="0,0,0,8"/>
+            <Button x:Name="button1" Command="{Binding AddCommand}" 
+                    Content="ADD" Margin="0,0,0,8"/>
+            <Button Command="{Binding SaveCommand}" Content="SAVE"
+                    Margin="0,0,0,8"/>
+        </StackPanel>
+    </Grid>
+</Window>
